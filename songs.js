@@ -93,7 +93,7 @@ const SONGS = [
   {
     title: 'Mirrorball',
     era: 'Folklore',
-    src: 'audio/Taylor Swift - Mirrorball.mp3',
+    src: 'audio/Taylor Swift - mirrorball.mp3',
     albumImage: 'images/folklore.webp',
     note: '✨',
     meaning: 'Trying to be everything for someone, always reflecting what they want.'
@@ -171,7 +171,7 @@ const SONGS = [
   {
     title: 'Message in a Bottle (From the Vault)',
     era: 'Red',
-    src: 'audio/Taylor Swift - Message in a Bottle.mp3',
+    src: 'audio/Taylor Swift - Message In A Bottle.mp3',
     albumImage: 'images/red.png',
     note: '📨',
     meaning: 'Hopeful longing for someone you haven’t reached yet.'
@@ -241,7 +241,7 @@ const SONGS = [
   {
     title: 'Out of the Woods',
     era: '1989',
-    src: 'audio/Taylor Swift - Out of the Woods.mp3',
+    src: 'audio/Taylor Swift - Out Of The Woods.mp3',
     albumImage: 'images/1989.png',
     note: '🌲',
     meaning: 'A fragile love constantly on the edge of breaking.'
@@ -293,7 +293,7 @@ const SONGS = [
   {
     title: 'Ruin the Friendship',
     era: 'Showgirl',
-    src: 'audio/Taylor Swift - Ruin the Friendship.mp3',
+    src: 'audio/Taylor Swift - Ruin The Friendship.mp3',
     albumImage: 'images/showgirl.webp',
     note: '💔',
     meaning: 'When feelings risk changing everything between two people.'
