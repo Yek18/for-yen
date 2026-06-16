@@ -36,6 +36,7 @@ export function renderHeroContent() {
             <button class="btn btn-secondary" id="btn-today-reminder">💌 Today's Reminder</button>
             <span class="hero-btn-hint">→ Encouragement &amp; letters</span>
           </div>
+        
         </div>
       </div>
     </div>

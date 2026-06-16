@@ -2,7 +2,7 @@
 //  SOUNDTRACK SECTION — soundtrack-section.js
 // ═══════════════════════════════════════════════
 
-const SONGS = [
+const TAYLOR_SONGS = [
   // ─────────────── DEBUT ───────────────
   {
     title: 'I’d Lie (From the Vault)',
@@ -23,10 +23,18 @@ const SONGS = [
   {
     title: 'Picture to Burn',
     era: 'Debut',
-    src: 'audio/Taylor Swift - Picture to Burn.mp3',
+    src: 'audio/Taylor Swift - Picture To Burn.mp3',
     albumImage: 'images/debut.jpg',
     note: '🔥',
     meaning: 'The fire of letting go when something no longer deserves your heart.'
+  },
+  {
+    title: 'Permanent Marker (From the Vault)',
+    era: 'Debut',
+    src: 'audio/Taylor Swift - Permanent Marker.mp3',
+    albumImage: 'images/debut.jpg',
+    note: '✏️',
+    meaning: 'A love that leaves a lasting impression, even when it\'s gone.'
   },
 
   // ─────────────── REPUTATION ───────────────
@@ -49,7 +57,7 @@ const SONGS = [
   {
     title: 'King of My Heart',
     era: 'Reputation',
-    src: 'audio/Taylor Swift - King of My Heart.mp3',
+    src: 'audio/Taylor Swift - King Of My Heart.mp3',
     albumImage: 'images/reputation.webp',
     note: '👑',
     meaning: 'A love that finally feels stable, real, and home.'
@@ -80,12 +88,20 @@ const SONGS = [
     note: '🇬🇧',
     meaning: 'A playful, dreamy love story full of adventure and charm.'
   },
+  {
+    title: 'Need (From the Vault)',
+    era: 'Lover',
+    src: 'audio/Taylor Swift - Need.mp3',
+    albumImage: 'images/lover.webp',
+    note: '💖',
+    meaning: 'A quiet kind of love that doesn’t ask to be chased—just felt, steady, safe, and always there when it matters most.'
+  },
 
   // ─────────────── FOLKLORE ───────────────
   {
     title: 'August',
     era: 'Folklore',
-    src: 'audio/Taylor Swift - August.mp3',
+    src: 'audio/Taylor Swift - august.mp3',
     albumImage: 'images/folklore.webp',
     note: '🌊',
     meaning: 'A fleeting summer love that was never fully yours.'
@@ -93,7 +109,7 @@ const SONGS = [
   {
     title: 'Mirrorball',
     era: 'Folklore',
-    src: 'audio/Taylor Swift - Mirrorball.mp3',
+    src: 'audio/Taylor Swift - mirrorball.mp3',
     albumImage: 'images/folklore.webp',
     note: '✨',
     meaning: 'Trying to be everything for someone, always reflecting what they want.'
@@ -171,7 +187,7 @@ const SONGS = [
   {
     title: 'Message in a Bottle (From the Vault)',
     era: 'Red',
-    src: 'audio/Taylor Swift - Message in a Bottle.mp3',
+    src: 'audio/Taylor Swift - Message In A Bottle.mp3',
     albumImage: 'images/red.png',
     note: '📨',
     meaning: 'Hopeful longing for someone you haven’t reached yet.'
@@ -241,7 +257,7 @@ const SONGS = [
   {
     title: 'Out of the Woods',
     era: '1989',
-    src: 'audio/Taylor Swift - Out of the Woods.mp3',
+    src: 'audio/Taylor Swift - Out Of The Woods.mp3',
     albumImage: 'images/1989.png',
     note: '🌲',
     meaning: 'A fragile love constantly on the edge of breaking.'
@@ -293,7 +309,7 @@ const SONGS = [
   {
     title: 'Ruin the Friendship',
     era: 'Showgirl',
-    src: 'audio/Taylor Swift - Ruin the Friendship.mp3',
+    src: 'audio/Taylor Swift - Ruin The Friendship.mp3',
     albumImage: 'images/showgirl.webp',
     note: '💔',
     meaning: 'When feelings risk changing everything between two people.'
@@ -316,16 +332,62 @@ const SONGS = [
   },
 ];
 
+const OLIVIA_SONGS = [
+  { title: 'vampire', era: 'GUTS', src: 'audio/Olivia Rodrigo - vampire.mp3', albumImage: 'images/guts.png', note: '🩸', meaning: 'A grand, building ballad about an emotional parasite.' },
+  { title: 'drivers license', era: 'SOUR', src: 'audio/Olivia Rodrigo - drivers license.mp3', albumImage: 'images/sour.png', note: '💔', meaning: 'A raw opening into heartbreak.' },
+  { title: 'deja vu', era: 'SOUR', src: 'audio/Olivia Rodrigo - deja vu.mp3', albumImage: 'images/sour.png', note: '🌀', meaning: 'A clever look at memories and repetition.' },
+  { title: 'good 4 u', era: 'SOUR', src: 'audio/Olivia Rodrigo - good 4 u.mp3', albumImage: 'images/sour.png', note: '⚡', meaning: 'High-energy, cathartic breakup anthem.' },
+  { title: 'traitor', era: 'SOUR', src: 'audio/Olivia Rodrigo - traitor.mp3', albumImage: 'images/sour.png', note: '💧', meaning: 'A slow burn about betrayal and longing.' },
+  { title: 'happier', era: 'SOUR', src: 'audio/Olivia Rodrigo - happier.mp3', albumImage: 'images/sour.png', note: '🕊️', meaning: 'Selfless yet selfish wishes for an ex moving on.' },
+  { title: 'favorite crime', era: 'SOUR', src: 'audio/Olivia Rodrigo - favorite crime.mp3', albumImage: 'images/sour.png', note: '🪓', meaning: 'A bittersweet folk-pop track about being an accomplice to your own heartbreak.' },
+  { title: 'jealousy, jealousy', era: 'SOUR', src: 'audio/Olivia Rodrigo - jealousy, jealousy.mp3', albumImage: 'images/sour.png', note: '📱', meaning: 'A gritty, alt-rock exploration of social media envy.' },
+  { title: 'drop dead', era: 'YSPB', src: 'audio/Olivia Rodrigo - drop dead.mp3', albumImage: 'images/yspb.png', note: '🖤', meaning: 'Her explosive 2026 chart-topper blending intense melancholy with an indie-pop punch.' }
+];
+
+// flat lookup used by the player
+const SONGS = [...TAYLOR_SONGS, ...OLIVIA_SONGS];
+
+const SONG_GROUPS = [
+  { artist: 'Taylor Swift', songs: TAYLOR_SONGS },
+  { artist: 'Olivia Rodrigo', songs: OLIVIA_SONGS },
+];
+
 export function renderSoundtrackContent() {
-  const cards = SONGS.map((s, i) => `
-    <div class="song-card" data-index="${i}" data-src="${s.src || ''}" data-album="${s.albumImage || ''}">
-      <button class="song-play-btn" aria-label="Play ${s.title}">▶</button>
-      <span class="song-era">${s.era}</span>
-      <div class="song-title">"${s.title}"</div>
-      <p class="song-meaning">${s.meaning}</p>
-      <span class="song-note">${s.note} this one is for you</span>
+  // Build grouped markup while keeping flat indexes for playback
+  let flatIndex = 0;
+  const selectorOptions = SONG_GROUPS.map(g => `<option value="${g.artist}">${g.artist}</option>`).join('');
+
+  const selectorHtml = `
+    <div class="artist-select-wrap">
+      <label for="artist-select">Show:</label>
+      <select id="artist-select">
+        <option value="all">All Artists</option>
+        ${selectorOptions}
+      </select>
     </div>
-  `).join('');
+  `;
+
+  const groupsHtml = SONG_GROUPS.map(group => {
+    const cards = group.songs.map(s => {
+      const idx = flatIndex++;
+      return `
+        <div class="song-card" data-index="${idx}" data-src="${s.src || ''}" data-album="${s.albumImage || ''}">
+          <button class="song-play-btn" aria-label="Play ${s.title}">▶</button>
+          <span class="song-era">${s.era}</span>
+          <div class="song-title">"${s.title}"</div>
+          <p class="song-meaning">${s.meaning}</p>
+          <span class="song-note">${s.note} this one is for you</span>
+        </div>
+      `;
+    }).join('');
+
+    return `
+      <section class="song-group" data-artist="${group.artist}">
+        <h3 class="song-group-title">${group.artist}</h3>
+        <div class="soundtrack-grid">${cards}</div>
+      </section>
+    `;
+  }).join('');
 
   return `
     <div class="back-nav">
@@ -339,7 +401,8 @@ export function renderSoundtrackContent() {
         Every song tells a story. These are the ones that tell yours.
       </p>
     </div>
-    <div class="soundtrack-grid">${cards}</div>
+    ${selectorHtml}
+    ${groupsHtml}
   `;
 }
 
@@ -441,4 +504,21 @@ export function attachSoundtrackEvents(onBack) {
       openPlayer(card, src);
     });
   });
+
+  // Artist selector: show only selected artist's group (or all)
+  const artistSelect = document.getElementById('artist-select');
+  function applyArtistFilter(value) {
+    document.querySelectorAll('.song-group').forEach(group => {
+      const artist = group.dataset.artist;
+      if (value === 'all' || value === artist) group.style.display = '';
+      else group.style.display = 'none';
+    });
+  }
+  if (artistSelect) {
+    // default to first artist to avoid too-long page
+    artistSelect.value = 'all';
+    artistSelect.addEventListener('change', (e) => applyArtistFilter(e.target.value));
+    // apply initial filter (show all by default)
+    applyArtistFilter(artistSelect.value);
+  }
 }
