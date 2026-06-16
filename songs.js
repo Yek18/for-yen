@@ -85,7 +85,7 @@ const SONGS = [
   {
     title: 'August',
     era: 'Folklore',
-    src: 'audio/Taylor Swift - August.mp3',
+    src: 'audio/Taylor Swift - august.mp3',
     albumImage: 'images/folklore.webp',
     note: '🌊',
     meaning: 'A fleeting summer love that was never fully yours.'
