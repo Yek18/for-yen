@@ -49,7 +49,7 @@ const SONGS = [
   {
     title: 'King of My Heart',
     era: 'Reputation',
-    src: 'audio/Taylor Swift - King of My Heart.mp3',
+    src: 'audio/Taylor Swift - King Of My Heart.mp3',
     albumImage: 'images/reputation.webp',
     note: '👑',
     meaning: 'A love that finally feels stable, real, and home.'
