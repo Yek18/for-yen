@@ -23,7 +23,7 @@ const SONGS = [
   {
     title: 'Picture to Burn',
     era: 'Debut',
-    src: 'audio/Taylor Swift - Picture to Burn.mp3',
+    src: 'audio/Taylor Swift - Picture To Burn.mp3',
     albumImage: 'images/debut.jpg',
     note: '🔥',
     meaning: 'The fire of letting go when something no longer deserves your heart.'
