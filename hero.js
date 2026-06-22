@@ -36,6 +36,10 @@ export function renderHeroContent() {
             <button class="btn btn-secondary" id="btn-today-reminder">💌 Today's Reminder</button>
             <span class="hero-btn-hint">→ Encouragement &amp; letters</span>
           </div>
+          <div class="hero-btn-group">
+            <button class="btn btn-ghost" id="btn-open-bloom">🌷 Press to Bloom</button>
+            <span class="hero-btn-hint">→ Night blossoms</span>
+          </div>
         
         </div>
       </div>
@@ -46,4 +50,5 @@ export function renderHeroContent() {
 export function attachHeroEvents(onOpenHeart, onTodayReminder) {
   document.getElementById('btn-open-heart')?.addEventListener('click', onOpenHeart);
   document.getElementById('btn-today-reminder')?.addEventListener('click', onTodayReminder);
+  document.getElementById('btn-open-bloom')?.addEventListener('click', () => { window.location.href = 'bloom.html'; });
 }
